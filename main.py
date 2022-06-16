@@ -40,7 +40,7 @@ def game():
     blanks_string = ''.join(blanks)
     print(blanks_string)
     rejected_string = rejected[0] + ', '.join(rejected[1:])
-    print("Incorrect letters:" + rejected_string)
+    print("\nIncorrect letters:" + rejected_string)
   
   def guess(): # asks for letter
     letter = input("Guess a letter: ").lower() # asks for letter
@@ -58,7 +58,7 @@ def game():
     return replaced
   
   while attempts < 9 and blanks.count("_ ") > 0:
-    print(drawing[attempts])
+    print("\n" + drawing[attempts])
     update()
     if guess() == False:
       attempts += 1
